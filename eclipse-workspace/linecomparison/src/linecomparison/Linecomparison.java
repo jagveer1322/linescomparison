@@ -29,11 +29,15 @@ public class Linecomparison {
         Double distance2 = Math.sqrt( ( x4 - x3 ) * ( x4 - x3 ) + ( y4 - y3 ) * ( y4 - y3 ));
         System.out.println("Length of the line L1 is : "+distance1);
         System.out.println("Length of the line L2 is : "+distance2);
-        if(distance1.equals(distance2))
-            System.out.println("line 1 and 2 are equal.");
-        else
-        {
-            System.out.println("Line 1 and 2 are not equal.");
+        int check = distance1.compareTo(distance2);
+        if (check == 0) {
+            System.out.println("line1 and 2 are equal.");
+        }
+        else if (check > 0) {
+            System.out.println("Line1 is greater than Line 2.");
+        }
+        else {
+            System.out.println("Line 1 is less than Line 2.");
         }
         
 	}
